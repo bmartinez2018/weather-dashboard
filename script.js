@@ -117,7 +117,7 @@ async function displayWeather() {
         var getLong = response.coord.lon;
         var getLat = response.coord.lat;
         
-        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=d3b85d453bf90d469c82e650a0a3da26&lat="+getLat+"&lon="+getLong;
+        var uvURL = "api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}="+getLat+"&lon="+getLong;
         var uvResponse = await $.ajax({
             url: uvURL,
             method: "GET"
